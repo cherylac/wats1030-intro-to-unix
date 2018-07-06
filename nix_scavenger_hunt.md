@@ -14,11 +14,36 @@ and then clone it to your development environment.
 
 ### Navigating the Filesystem
 
-* Get an idea of where you are in the operating system. Use the `pwd` command to find your "path to working directory"--your current location in the filesystem of your devbox. *Paste the output of the `pwd` command here:*
-* Discover more about this filesystem. Use `ls` (the "list" command)to see what is in this directory. *What directories and files do you see when you run `ls`?*
-* You can use *options* to modify how a command runs. Try using `ls -alh` to see the contents of your current directory. *How are the results different when you use the `-alh` options?*
-* The `man` ("manual") command tells you more about how any given command works. (*WARNING:* CodeAnywhere does not support the man command. You can click the following link to complete this task: http://man.he.net/). Run `man` to see instructions about how to use `man`. Then use `man` to learn what the `a`, `l`, and `h` options mean when used with the `ls` command. *Write down what those options do?*
-* Commands can also take *arguments*, which are usually the names of files or locations that you want the command to work with. Try running `ls /` to see what files are in the *root* directory of the filesystem. *What files and directories do you see listed?*
+* Get an idea of where you are in the operating system. Use the `pwd` command to find your "path to working directory"--your current location in the filesystem of your devbox. *Paste the output of the `pwd` command here:*/projects/wats1030-intro-to-unix
+user@1e7e519cc4c8:/projects/wats1030-intro-to-unix$
+
+* Discover more about this filesystem. Use `ls` (the "list" command)to see what is in this directory. *What directories and files do you see when you run `ls`?* challenge_files  LICENSE  nix_scavenger_hunt.md  nix_scavenger_hunt_stretch.md  README.md  super_scavengers.md
+user@1e7e519cc4c8:/projects/wats1030-intro-to-unix$
+
+* You can use *options* to modify how a command runs. Try using `ls -alh` to see the contents of your current directory. *How are the results different when you use the `-alh` options?* total 36K
+drwxr-xr-x 5 user user  178 Jul  6 02:20 .
+drwxr-xr-x 5 user root   87 Jul  6 02:20 ..
+drwxr-xr-x 7 user user 8.0K Jul  6 02:20 challenge_files
+drwxr-xr-x 2 user user    6 Jul  6 02:20 .che
+drwxr-xr-x 7 user user  131 Jul  6 02:20 .git
+-rw-r--r-- 1 user user 1.1K Jul  6 02:20 LICENSE
+-rw-r--r-- 1 user user 5.7K Jul  6 02:23 nix_scavenger_hunt.md
+-rw-r--r-- 1 user user  317 Jul  6 02:20 nix_scavenger_hunt_stretch.md
+
+* The `man` ("manual") command tells you more about how any given command works. (*WARNING:* CodeAnywhere does not support the man command. You can click the following link to complete this task: http://man.he.net/). Run `man` to see instructions about how to use `man`. Then use `man` to learn what the `a`, `l`, and `h` options mean when used with the `ls` command. *Write down what those options do?* 
+          'a' intro
+           Display,  in  succession,  all  of the available intro manual pages
+           contained within the manual.  It is possible to quit  between  suc-
+           cessive displays or skip any of them.
+           -'l' -Tdvi ./foo.1x.gz > ./foo.1x.dvi
+           This  command  will  decompress  and format the nroff source manual
+           page ./foo.1x.gz into a device independent (dvi) file.   The  redi-
+           rection is necessary as the -T flag causes output to be directed to
+           stdout with no pager.  The output could be viewed  with  a  program
+           such  as  xdvi or further processed into PostScript using a program
+           such as dvips.
+* Commands can also take *arguments*, which are usually the names of files or locations that you want the command to work with. Try running `ls /` to see what files are in the *root* directory of the filesystem. *What files and directories do you see listed?* challenge_files  LICENSE  nix_scavenger_hunt.md  nix_scavenger_hunt_stretch.md  README.md  super_scavengers.mduser@1e7e519cc4c8:/projects/wats1030-intro-to-unix$
+
 * A Unix filesystem has a few special shortcuts to refer to specific locations. `/` indicates the *root* of the filesystem, meaning the top-most directory in the filesystem hierarchy. Use the `cd` ("change directory") command to move to the root directory. (Hint: Use `man` to look up the `cd` command if you have any issues) *Then run `pwd` and paste the output here:*
 * Another special shortcut in Unix is the `~` location. This indicates the *user root* directory, meaning the top-most directory in the hierarchy that comes below your user account. Use `cd` to move to `~`. *Run `pwd` and paste the response here:*
 * Change directory into the `challenge_files` directory. Use `ls` to find only the files with a `.demo` pattern. *How many files do you find?*
